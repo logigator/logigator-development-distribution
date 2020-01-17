@@ -1,6 +1,16 @@
 # logigator-development-distribution
 
-Repository for helping to developing Logigatpr.
+Repository for helping to develop Logigator.
+
+### Project Repositories
+- [Logigator Editor](https://github.com/logigator/logigator-editor)
+- [Logigator Home](https://github.com/logigator/logigator-home)
+- [Logigator Shared Comps](https://github.com/logigator/logigator-shared-comps)
+- [Logigator Backend](https://github.com/logigator/logigator-backend)
+- [Logigator Simulation](https://github.com/logigator/logigator-simulation)
+
+### Creating Issues
+Issues should be created in the above mentioned repository, not in this one.
 
 ## Getting Started
 ### Prerequisites
@@ -53,6 +63,12 @@ There are a few scripts in `package.json` of this repo.
 It is also possible to run the scripts directly in the repositories.
 
 It is not required to start all projects to develop, you can run `logigator-editor` without `logigator-home` or `logigator-shared-comps` for example.
+
+### Simulation-Mode in the Editor
+If the simulation-mode is not working, is this most likely due to a missing Webassembly module. 
+To fix this issue you must build the [Simulation Code](https://github.com/logigator/logigator-simulation) by your self. 
+Instructions for doing so can be found in the simulation repo. 
+After you built the simulation-code, just copy the contents of `logigator-simulation/webAssembly/dist/` to `logigator-editor/src/assets/wasm`.
 
 ## License
 This Project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
