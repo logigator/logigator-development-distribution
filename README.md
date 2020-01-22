@@ -18,7 +18,7 @@ You need to have node and npm installed. We recommend installing it via [nvm](ht
 Additionally you need PHP 7.2 or higher and a MariaDB or MySQL Database to use the backend.
 
 #### Debian Node Installation
-```shell
+```shell script
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -69,6 +69,34 @@ If the simulation-mode is not working, is this most likely due to a missing Weba
 To fix this issue you must build the [Simulation Code](https://github.com/logigator/logigator-simulation) by your self. 
 Instructions for doing so can be found in the simulation repo. 
 After you built the simulation-code, just copy the contents of `logigator-simulation/webAssembly/dist/` to `logigator-editor/src/assets/wasm`.
+
+## Committing your changes
+
+Firstly you have to create a fork of the repository you want to contribute to. So for example if you want to contribute to `logigator-editor` you have to fork `https://github.com/logigator/logigator-editor.git`.
+
+The following explanation will show you how to contribute to `logigator-editor`, but the process is the same for all other repositories as well.
+
+```shell script
+cd logigator-editor
+git rename origin upstream
+git remote add origin git@github.com:Liioooo/logigator-editor.git
+git fetch upstream
+git checkout development
+git merge upstream/development
+git push origin
+```
+Note: Everything after `git checkout development` is only required if there where changes in logigator, so you need to update your own fork.
+
+After you did this you can start to make changes. After you made some changes create a new branch and push it to your fork.
+
+```shell script
+git checkout -b my-change
+git add .
+git commit -m 'Best change ever'
+git push
+```
+
+Now you can create a pull request from your fork to the logigator organisation. If there is a development branch in the logigator repo, please select it as base instead of master.
 
 ## License
 This Project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
