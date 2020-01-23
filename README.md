@@ -35,7 +35,7 @@ npm run setup-dev:<https/ssh>:<win32/darwin:linux>
 
 ### Setting Up Backend
 Copy the contents of `logigator-backend/config.php.example` to `logigator-backend/config.php` and fill in the missing information. 
-If you leave out the Google and Twitter Keys, Google and Twitter Login will not work. If the email accounts are not field in it won't be possible to register at all. 
+If you leave out the Google and Twitter Keys, Google and Twitter Login will not work. If the email accounts are not filled in it won't be possible to register at all. 
 
 ### Setting Up Database
 Run `logigator-backend/db_create.sql` in your database. It will create a user 'logigator' and a database 'logigator', you can change this to whatever you configured in `config.php`.
@@ -50,14 +50,14 @@ Please add the following lines to your hosts file: <br>
 ```
 
 ### Starting the Projects
-There are a few scripts in `package.json` of this repo.
+There are a few scripts in `package.json` included in this repo.
 
 - `start:backend` - serves the backend on port 8203
 - `start:proxy` - starts a proxy-server to the Backend and all dev-servers
 - `start:backend-and-proxy` - starts backend and proxy-server
 - `start:home` - serves logigator-home on port 8201 
 - `start:shared-comps` - serves logigator-shared-comps for live reloading
-- `start:editor:web` - serves the logigator-editor on port 8202
+- `start:editor:web` - serves logigator-editor on port 8202
 - `start:edtior:electron` - serves logigator-editor electron app
 
 It is also possible to run the scripts directly in the repositories.
@@ -65,7 +65,7 @@ It is also possible to run the scripts directly in the repositories.
 It is not required to start all projects to develop, you can run `logigator-editor` without `logigator-home` or `logigator-shared-comps` for example.
 
 ### Simulation-Mode in the Editor
-If the simulation-mode is not working, is this most likely due to a missing Webassembly module. 
+If the simulation-mode is not working, it is most likely due to a missing WebAssembly module. 
 To fix this issue you must build the [Simulation Code](https://github.com/logigator/logigator-simulation) by your self. 
 Instructions for doing so can be found in the simulation repo. 
 After you built the simulation-code, just copy the contents of `logigator-simulation/webAssembly/dist/` to `logigator-editor/src/assets/wasm`.
@@ -87,7 +87,7 @@ git push origin
 ```
 Note: Everything after `git checkout development` is only required if there where changes in logigator, so you need to update your own fork.
 
-After you did this you can start to make changes. After you made some changes create a new branch and push it to your fork.
+After you did this you can start making changes. After you made some changes create a new branch and push it to your fork.
 
 ```shell script
 git checkout -b my-change
