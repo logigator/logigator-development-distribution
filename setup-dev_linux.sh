@@ -39,9 +39,6 @@ cd "logigator-home"
 git checkout development
 cd ".."
 
-echo "Setting up local dependencies"
-node setup-local-dependencies.js
-
 echo "npm i logigator-editor"
 cd "logigator-editor"
 npm i

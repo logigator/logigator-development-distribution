@@ -1,6 +1,6 @@
 # logigator-development-distribution
 
-Repository for helping to develop Logigator.
+Repository to help developing Logigator.
 
 ### Project Repositories
 - [Logigator Editor](https://github.com/logigator/logigator-editor)
@@ -39,6 +39,7 @@ If you leave out the Google and Twitter Keys, Google and Twitter Login will not 
 
 ### Setting Up Database
 Run `logigator-backend/db_create.sql` in your database. It will create a user 'logigator' and a database 'logigator', you can change this to whatever you configured in `config.php`.
+To create the admin account and the  predefined shares run `logigator-backend/inserts.sql` in yor database.
 
 ### Hosts
 Please add the following lines to your hosts file: <br>

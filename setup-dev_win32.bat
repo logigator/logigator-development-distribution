@@ -41,9 +41,6 @@ cd "logigator-home"
 git checkout development
 cd ".."
 
-echo "Setting up local dependencies"
-@CALL node setup-local-dependencies.js
-
 echo "npm i logigator-editor"
 cd "logigator-editor"
 @CALL npm i
