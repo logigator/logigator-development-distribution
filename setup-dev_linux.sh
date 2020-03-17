@@ -24,7 +24,7 @@ cd ".."
 
 echo "Checkout logigator-shared-comps Master Branch"
 cd "logigator-shared-comps"
-git checkout master
+git checkout development
 npm i
 npm run build
 cd ".."
@@ -32,20 +32,12 @@ cd ".."
 echo "Checkout logigator-editor Development Branch"
 cd "logigator-editor"
 git checkout development
+npm i
 cd ".."
 
 echo "Checkout logigator-home Development Branch"
 cd "logigator-home"
 git checkout development
-cd ".."
-
-echo "npm i logigator-editor"
-cd "logigator-editor"
-npm i
-cd ".."
-
-echo "npm i logigator-home"
-cd "logigator-home"
 npm i
 cd ".."
 
