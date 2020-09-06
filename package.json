@@ -4,8 +4,8 @@
 	"scripts": {
 		"setup-dev:https:win32": "setup-dev_win32.bat https",
 		"setup-dev:ssh:win32": "setup-dev_win32.bat ssh",
-		"setup-dev:https:darwin:linux": "setup-dev_linux.sh htps",
-		"setup-dev:ssh:darwin:linux": "setup-dev_linux.sh ssh",
+		"setup-dev:https:darwin:linux": "./setup-dev_linux.sh https",
+		"setup-dev:ssh:darwin:linux": "./setup-dev_linux.sh ssh",
 		"start:backend": "cd logigator-backend && php -S 0.0.0.0:8203",
 		"start:proxy": "node proxy-server.js",
 		"start:backend-and-proxy": "npm-run-all --parallel start:proxy start:backend",
