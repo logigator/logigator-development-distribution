@@ -6,9 +6,8 @@
 		"setup-dev:ssh:win32": "setup-dev_win32.bat ssh",
 		"setup-dev:https:darwin:linux": "./setup-dev_linux.sh https",
 		"setup-dev:ssh:darwin:linux": "./setup-dev_linux.sh ssh",
+		"start:proxy": "docker-compose -f docker-compose.dev-proxy.yaml up",
 		"start:backend": "cd logigator-backend && php -S 0.0.0.0:8203",
-		"start:proxy": "node proxy-server.js",
-		"start:backend-and-proxy": "npm-run-all --parallel start:proxy start:backend",
 		"start:home": "cd logigator-home && npm start",
 		"start:shared-comps": "cd logigator-shared-comps && npm start",
 		"start:editor:web": "cd logigator-editor && npm run start:web",
@@ -21,9 +20,5 @@
 	"description": "Repository to help develop Logigator",
 	"homepage": "https://github.com/logigator/logigator-development-distribution#readme",
 	"author": "Logigator",
-	"license": "MIT",
-	"devDependencies": {
-		"http-proxy": "^1.18.0",
-		"npm-run-all": "^4.1.5"
-	}
+	"license": "MIT"
 }

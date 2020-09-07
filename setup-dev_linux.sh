@@ -22,7 +22,7 @@ git checkout development
 npm i
 cd ".."
 
-echo "Checkout logigator-shared-comps Master Branch"
+echo "Checkout logigator-shared-comps Development Branch"
 cd "logigator-shared-comps"
 git checkout development
 npm i
@@ -41,7 +41,7 @@ git checkout development
 npm i
 cd ".."
 
-echo "composer install logigator-backend"
+echo "Checkout logigator-backend Development Branch"
 cd "logigator-backend"
 git checkout development
 composer install
