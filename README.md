@@ -1,4 +1,7 @@
-# logigator-development-distribution
+# No longer used
+Development now happens in https://github.com/logigator/logigator
+
+## logigator-development-distribution
 
 Repository to help developing Logigator.
 
